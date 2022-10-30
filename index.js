@@ -16,19 +16,19 @@ function createGrid() {
   }
   return points;
 }
+const points = createGrid();
 
 const sketch = (s) => {
   s.setup = () => {
     s.createCanvas(500, 500);
     s.background(0);
   };
-  s.draw = () => {
-    const points = createGrid();
 
+  s.draw = () => {
     points.forEach((point) => {
       let x = point.u * s.width;
       let y = point.v * s.height;
-
+      s.fill('#fff');
       s.circle(x, y, 10);
     });
   };

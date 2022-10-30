@@ -22,6 +22,15 @@ const sketch = (s) => {
     s.createCanvas(500, 500);
     s.background(0);
   };
-  s.draw = () => {};
+  s.draw = () => {
+    const points = createGrid();
+
+    points.forEach((point) => {
+      let x = point.u * s.width;
+      let y = point.v * s.height;
+
+      s.circle(x, y, 10);
+    });
+  };
 };
 const sketchInit = new p5(sketch);

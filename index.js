@@ -6,7 +6,6 @@ import './style.css';
 function createGrid() {
   const points = [];
   const count = 5;
-
   for (let x = 0; x <= count; x++) {
     for (let y = 0; y <= count; y++) {
       const u = x / count;
